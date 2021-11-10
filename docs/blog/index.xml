@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on GlacierZero</title>
+    <link>https://glacierzero.com/blog/</link>
+    <description>Recent content in Blogs on GlacierZero</description>
+    <image>
+      <url>https://glacierzero.com/myheader.jpg</url>
+      <link>https://glacierzero.com/myheader.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://glacierzero.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First post</title>
+      <link>https://glacierzero.com/blog/first_post/first_post_nov21/</link>
+      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://glacierzero.com/blog/first_post/first_post_nov21/</guid>
+      <description>Welcome to my personal site.</description>
+    </item>
+    
+  </channel>
+</rss>
