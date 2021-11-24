@@ -5,8 +5,8 @@
     <link>https://glacierzero.com/</link>
     <description>Recent content on GlacierZero</description>
     <image>
-      <url>https://glacierzero.com/myheader.jpg</url>
-      <link>https://glacierzero.com/myheader.jpg</link>
+      <url>https://glacierzero.com/logo-banner.png</url>
+      <link>https://glacierzero.com/logo-banner.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -27,7 +27,7 @@
       
       <guid>https://glacierzero.com/about/</guid>
       <description>Hi there! I am Plácido. Welcome to my personal site.
-I am a Computing Engineer doing science at CERN. I work on design, architecture and development of software for future detector for High Energy Physics.
+I am a Computing Engineer doing science at CERN. I work on design, architecture and development of software for future detectors for High Energy Physics.
 I did my PhD in Computer Science and Technology at CERN, in the LHCb experiment, with University Carlos III of Madrid.
  My PhD thesis
  </description>
