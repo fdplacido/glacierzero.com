@@ -7,7 +7,7 @@ url: "/about"
 Hi there! I am Plácido. Welcome to my personal site.
 
 
-I am a Computing Engineer doing science at [CERN](https://home.cern/). I work on design, architecture and development of software for future detector for High Energy Physics.
+I am a Computing Engineer doing science at [CERN](https://home.cern/). I work on design, architecture and development of software for future detectors for High Energy Physics.
 
 
 I did my PhD in Computer Science and Technology at CERN, in the [LHCb](https://lhcb-public.web.cern.ch/) experiment, with University Carlos III of Madrid.

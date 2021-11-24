@@ -29,7 +29,7 @@ params:
   description: "My personal site"
   author: Placido Fernandez Declara
   keywords: ["c++", "python", "guides", "open-source", "programming", "software"]
-  images: ["/myheader.jpg"]
+  images: ["/logo-banner.png"]
   dateFormat: "2 January 2006"
   defaultTheme: auto
   disableThemeToggle: false
@@ -48,8 +48,8 @@ params:
   # hideSummary: false
 
   homeInfoParams:
-    LogoLight: /logo-light-theme.png
-    LogoDark: /logo-dark-theme.png
+    LogoLight: /logo-light-theme.jpg
+    # LogoDark: /logo-dark-theme.jpg
     Content: >
       My personal site
 
