@@ -1,7 +1,8 @@
 ---
 title: "tmux: get more productive with a workflow to interact with the terminal and command line"
 date: 2021-11-24
-images: ["/blog/img/tmux_cover.jpg"]
+images: ["/blog/img/tmux-9vQG6v1md1s.jpg"]
+tags: ["terminal", "cli", "keyboard", "productivity"]
 draft: false
 ---
 

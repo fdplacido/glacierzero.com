@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on GlacierZero</title>
-    <link>https://glacierzero.com/blog/</link>
-    <description>Recent content in Blogs on GlacierZero</description>
+    <title>git on GlacierZero</title>
+    <link>https://glacierzero.com/tags/git/</link>
+    <description>Recent content in git on GlacierZero</description>
     <image>
       <url>https://glacierzero.com/logo-banner.png</url>
       <link>https://glacierzero.com/logo-banner.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Dec 2021 22:18:34 +0100</lastBuildDate><atom:link href="https://glacierzero.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Dec 2021 22:18:34 +0100</lastBuildDate><atom:link href="https://glacierzero.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Github keyboard shortcuts to move around faster and productively</title>
       <link>https://glacierzero.com/blog/github_usage_dec21/</link>
@@ -20,18 +20,6 @@
       <description>If you often browse Github repositories on your browser, chances are you find yourself moving between files, jumping between lines, reviewing diffs and other common source code related tasks. Github has a list of commands[1] and keyboard shortcuts[2] to move around faster.
 Here are the keyboard shortcuts that I find myself using more often to navigate and interact with Github repositories:
  Ctrl + k: Open command palette with fuzzy search  From here you make a wide range of actions by just writting: where you want to, or what you want to do Search is fuzzy, so you don&amp;rsquo;t even need to type the complete command, or even correctly Navigate between tabs, just type: issues, PRs, Actions, Settings Navigate between repositories: delete the repository name, and start writing a different one which belogs to the user or organization Run commands by typing &amp;gt;.</description>
-    </item>
-    
-    <item>
-      <title>tmux: get more productive with a workflow to interact with the terminal and command line</title>
-      <link>https://glacierzero.com/blog/tmux_workflow_nov21/</link>
-      <pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://glacierzero.com/blog/tmux_workflow_nov21/</guid>
-      <description>Tmux has 2 main functions:
- Creating, accessing and managing terminals from a single screen Detaching and reattaching to the session: it allows you to continue were you left  Here I share the workflow I use everyday at work and my personal computer, explaining with it what I believe are the core features of tmux.
-Why tmux tmux is a tool to organize yourself in your terminal:
- create and close windows names windows for easier organization split windows vertically and/or horizontally into panes as much as you want focus on some specific pane move around between windows and panes detach from a session and come back days later and continue everything were you left it share sessions between computers  Many of these things can be achieved with other tools, or combination of tools.</description>
     </item>
     
   </channel>

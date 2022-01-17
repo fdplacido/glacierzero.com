@@ -27,7 +27,7 @@ menu:
 
 params:
   description: "My personal site"
-  author: Placido Fernandez Declara
+  author: Plácido Fernández Declara
   keywords: ["c++", "python", "guides", "open-source", "programming", "software"]
   images: ["/logo-banner.png"]
   dateFormat: "2 January 2006"
