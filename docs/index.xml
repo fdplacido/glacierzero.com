@@ -35,15 +35,15 @@ Why tmux tmux is a tool to organize yourself in your terminal:
     </item>
     
     <item>
-      <title>About</title>
+      <title>About me</title>
       <link>https://glacierzero.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://glacierzero.com/about/</guid>
       <description>Hi there! I am Plácido. Welcome to my personal site.
-I am a Computing Engineer doing science at CERN. I work on design, architecture and development of software for future detectors for High Energy Physics.
+I am a Computing Engineer doing computing science at CERN. I currently work on design, architecture and development of software for future detectors for High Energy Physics.
 I did my PhD in Computer Science and Technology at CERN, in the LHCb experiment, with University Carlos III of Madrid.
- My PhD thesis: Particle Tracking and Identification on multi- and many-core hardware platforms</description>
+Prior to my experience in Computing for High Energy Physics I worked in the space industry, at GMV, developing software for satellite control centers.</description>
     </item>
     
     

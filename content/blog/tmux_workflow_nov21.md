@@ -74,12 +74,77 @@ fi
 
 ## Windows
 
+Tmux windows are equivalent to tabs in web browsers, it allows you to open multiple command line prompts. Each window can hold multiple [panes](#panes), but can also be used without them.
 
+There are different ways of switching between windows:
+- With `prefix + 0...9`: input the number assigned to the window
+  + Limited to 10 windows, since only one digit is used to change between them
+- With `prefix + '`, then input the number
+  + Takes an extra step, but allows to enter any number even if more than one digit is used
+- With `prefix + w`: shows a list of windows and preview of each window panes (numbered panes)
+  + This option gives the most info at a glance, and allows for intuitive switching with arrow keys (or vim-style keys `hjkl`)
+  + Sub panes can also be accessed with arrow keys for a fine-grained selection of prompt
+
+```sh
+# create new window
+prefix + c
+
+# switch to window
+prefix + 0 ... 9
+### switch inputing number
+prefix + `
+<number>
+### switch showing list
+prefix + w
+
+# cycle through windows
+prefix + n
+prefix + p
+
+# rename window
+prefix + ,
+
+# kill window
+prefix + &
+```
 
 ## Panes
 
+- Panes can be used to display multiple terminals in the same window. Side by side terminals or complex configurations can be used here by splitting the window vertically and horizontally
+- Panes can be zoomed in, so one focuses for a moment on it, then goes back to seeing all the panes together
+- Panes can also be resized to give more space to some specific terminal
 
-## Moving around
+
+```sh
+# split horizontal - omit last " symbol
+prefix + "                                     "
+
+# split vertical
+prefix + %
+
+# move to panel
+prefix + <arrow key>
+
+# cycle through panels
+prefix + o
+
+# kill current panel
+prefix + x
+
+# resize panels
+prefix + alt + <arrow>
+
+# zoom current pane
+prefix + z
+
+# Balance size panels vertically
+prefix + Alt + 2
+
+# Balance size panels horizontally
+prefix + Alt + 1
+```
+
+
 
 
 
