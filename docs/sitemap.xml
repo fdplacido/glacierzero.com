@@ -3,7 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://glacierzero.com/blog/</loc>
-    <lastmod>2021-12-07T22:18:34+01:00</lastmod>
+    <lastmod>2022-01-19T01:12:42+01:00</lastmod>
+  </url><url>
+    <loc>https://glacierzero.com/tags/cli/</loc>
+    <lastmod>2022-01-19T01:12:42+01:00</lastmod>
+  </url><url>
+    <loc>https://glacierzero.com/</loc>
+    <lastmod>2022-01-19T01:12:42+01:00</lastmod>
+  </url><url>
+    <loc>https://glacierzero.com/blog/symbol_names_english/</loc>
+    <lastmod>2022-01-19T01:12:42+01:00</lastmod>
+  </url><url>
+    <loc>https://glacierzero.com/tags/</loc>
+    <lastmod>2022-01-19T01:12:42+01:00</lastmod>
+  </url><url>
+    <loc>https://glacierzero.com/tags/terminal/</loc>
+    <lastmod>2022-01-19T01:12:42+01:00</lastmod>
   </url><url>
     <loc>https://glacierzero.com/tags/git/</loc>
     <lastmod>2021-12-07T22:18:34+01:00</lastmod>
@@ -14,23 +29,11 @@
     <loc>https://glacierzero.com/blog/github_usage_dec21/</loc>
     <lastmod>2021-12-07T22:18:34+01:00</lastmod>
   </url><url>
-    <loc>https://glacierzero.com/</loc>
-    <lastmod>2021-12-07T22:18:34+01:00</lastmod>
-  </url><url>
     <loc>https://glacierzero.com/tags/keyboard/</loc>
     <lastmod>2021-12-07T22:18:34+01:00</lastmod>
   </url><url>
     <loc>https://glacierzero.com/tags/productivity/</loc>
     <lastmod>2021-12-07T22:18:34+01:00</lastmod>
-  </url><url>
-    <loc>https://glacierzero.com/tags/</loc>
-    <lastmod>2021-12-07T22:18:34+01:00</lastmod>
-  </url><url>
-    <loc>https://glacierzero.com/tags/cli/</loc>
-    <lastmod>2021-11-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://glacierzero.com/tags/terminal/</loc>
-    <lastmod>2021-11-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://glacierzero.com/blog/tmux_workflow_nov21/</loc>
     <lastmod>2021-11-24T00:00:00+00:00</lastmod>

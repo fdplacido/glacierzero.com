@@ -10,7 +10,18 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://glacierzero.com/tags/cli/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Jan 2022 01:12:42 +0100</lastBuildDate><atom:link href="https://glacierzero.com/tags/cli/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Names of symbols when programming, in english</title>
+      <link>https://glacierzero.com/blog/symbol_names_english/</link>
+      <pubDate>Wed, 19 Jan 2022 01:12:42 +0100</pubDate>
+      
+      <guid>https://glacierzero.com/blog/symbol_names_english/</guid>
+      <description>Some will disagree since this differs between countries, regions or even companies. But this should be a common ground that everyone can understand what one is referring to. Probably brackets are the most controversial.
+This are the most common names to refer to various symbols often found when programming:
+() : brackets / parenthesis [] : square brackets {} : curly brackets &amp;lt;&amp;gt; : angle brackets &amp;quot; : double quote &#39; : single quote ` : backquote # : hash - : dash _ : underscore : : colon ; : semicolon .</description>
+    </item>
+    
     <item>
       <title>tmux: get more productive with a workflow to interact with the terminal and command line</title>
       <link>https://glacierzero.com/blog/tmux_workflow_nov21/</link>
