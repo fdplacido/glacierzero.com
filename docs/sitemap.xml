@@ -45,5 +45,7 @@
     <loc>https://glacierzero.com/search/</loc>
   </url><url>
     <loc>https://glacierzero.com/series/</loc>
+  </url><url>
+    <loc>https://glacierzero.com/tags/</loc>
   </url>
 </urlset>

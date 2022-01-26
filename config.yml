@@ -16,14 +16,18 @@ menu:
       name: About me
       url: about/
       weight: 1
+    - identifier: tags
+      name: Tags
+      url: tags/
+      weight: 2
     - identifier: archive
       name: Archive
       url: archive/
-      weight: 2
+      weight: 3
     - identifier: search
       name: Search
       url: search/
-      weight: 3
+      weight: 4
 
 params:
   description: "My personal site"
