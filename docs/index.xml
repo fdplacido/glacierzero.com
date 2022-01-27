@@ -10,7 +10,17 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Jan 2022 01:12:42 +0100</lastBuildDate><atom:link href="https://glacierzero.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Jan 2022 00:11:38 +0100</lastBuildDate><atom:link href="https://glacierzero.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Go Maps: pointers and value types</title>
+      <link>https://glacierzero.com/blog/go_maps_usage/</link>
+      <pubDate>Thu, 27 Jan 2022 00:11:38 +0100</pubDate>
+      
+      <guid>https://glacierzero.com/blog/go_maps_usage/</guid>
+      <description>Hash maps are often a good data structure when we want to access or store pairs of associated data; pairs commonly known as key-value.
+What makes a hash table (a map) a great data structure is that internally it will compute an index based on the key, that will point us to where our value is. This is what makes them so fast to insert O(1), delete O(1) and search O(1) for most cases (on average) with unordered data, while taking O(n) space.</description>
+    </item>
+    
     <item>
       <title>Names of symbols when programming, in english</title>
       <link>https://glacierzero.com/blog/symbol_names_english/</link>

@@ -10,7 +10,25 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Jan 2022 01:12:42 +0100</lastBuildDate><atom:link href="https://glacierzero.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Jan 2022 00:11:38 +0100</lastBuildDate><atom:link href="https://glacierzero.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>data structures</title>
+      <link>https://glacierzero.com/tags/data-structures/</link>
+      <pubDate>Thu, 27 Jan 2022 00:11:38 +0100</pubDate>
+      
+      <guid>https://glacierzero.com/tags/data-structures/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>https://glacierzero.com/tags/go/</link>
+      <pubDate>Thu, 27 Jan 2022 00:11:38 +0100</pubDate>
+      
+      <guid>https://glacierzero.com/tags/go/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>cli</title>
       <link>https://glacierzero.com/tags/cli/</link>

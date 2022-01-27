@@ -3,18 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://glacierzero.com/blog/</loc>
-    <lastmod>2022-01-19T01:12:42+01:00</lastmod>
+    <lastmod>2022-01-27T00:11:38+01:00</lastmod>
+  </url><url>
+    <loc>https://glacierzero.com/tags/data-structures/</loc>
+    <lastmod>2022-01-27T00:11:38+01:00</lastmod>
+  </url><url>
+    <loc>https://glacierzero.com/</loc>
+    <lastmod>2022-01-27T00:11:38+01:00</lastmod>
+  </url><url>
+    <loc>https://glacierzero.com/tags/go/</loc>
+    <lastmod>2022-01-27T00:11:38+01:00</lastmod>
+  </url><url>
+    <loc>https://glacierzero.com/tags/</loc>
+    <lastmod>2022-01-27T00:11:38+01:00</lastmod>
+  </url><url>
+    <loc>https://glacierzero.com/blog/go_maps_usage/</loc>
+    <lastmod>2022-01-27T00:11:38+01:00</lastmod>
   </url><url>
     <loc>https://glacierzero.com/tags/cli/</loc>
     <lastmod>2022-01-19T01:12:42+01:00</lastmod>
   </url><url>
-    <loc>https://glacierzero.com/</loc>
-    <lastmod>2022-01-19T01:12:42+01:00</lastmod>
-  </url><url>
     <loc>https://glacierzero.com/blog/symbol_names_english/</loc>
-    <lastmod>2022-01-19T01:12:42+01:00</lastmod>
-  </url><url>
-    <loc>https://glacierzero.com/tags/</loc>
     <lastmod>2022-01-19T01:12:42+01:00</lastmod>
   </url><url>
     <loc>https://glacierzero.com/tags/terminal/</loc>
