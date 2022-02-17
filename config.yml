@@ -13,7 +13,7 @@ publishDir: "docs"
 menu:
   main:
     - identifier: about
-      name: About me
+      name: About
       url: about/
       weight: 1
     - identifier: tags
@@ -47,7 +47,7 @@ params:
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowToc: true
-  comments: false
+  comments: true
   # hidemeta: false
   # hideSummary: false
 
