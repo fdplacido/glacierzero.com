@@ -20,7 +20,7 @@
 <center>
   {{ range first 7 $.Site.Taxonomies.tags.ByCount }}
     <li>
-        <a href="">{{ .Name }} <sup><strong><sup>{{ .Count }}</sup></strong></sup> </a>
+        <a href="/tags/{{ .Name | urlize }}">{{ .Name }} <sup><strong><sup>{{ .Count }}</sup></strong></sup> </a>
     </li>
   {{ end }}
 </center>
