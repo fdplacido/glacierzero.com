@@ -1,6 +1,6 @@
 ---
 title: "Using Go Maps: pointers and value types"
-date: 2022-01-27T00:11:38+01:00
+date: 2022-02-14T00:11:38+01:00
 images: ["/blog/img/go_hash_maps.png"]
 tags: ["go", "data structures"]
 draft: false
