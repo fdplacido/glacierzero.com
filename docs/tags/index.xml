@@ -10,11 +10,38 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Jan 2022 00:11:38 +0100</lastBuildDate><atom:link href="https://glacierzero.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Apr 2022 10:03:17 +0200</lastBuildDate><atom:link href="https://glacierzero.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hpc</title>
+      <link>https://glacierzero.com/tags/hpc/</link>
+      <pubDate>Mon, 11 Apr 2022 10:03:17 +0200</pubDate>
+      
+      <guid>https://glacierzero.com/tags/hpc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://glacierzero.com/tags/linux/</link>
+      <pubDate>Mon, 11 Apr 2022 10:03:17 +0200</pubDate>
+      
+      <guid>https://glacierzero.com/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spack</title>
+      <link>https://glacierzero.com/tags/spack/</link>
+      <pubDate>Mon, 11 Apr 2022 10:03:17 +0200</pubDate>
+      
+      <guid>https://glacierzero.com/tags/spack/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>data structures</title>
       <link>https://glacierzero.com/tags/data-structures/</link>
-      <pubDate>Thu, 27 Jan 2022 00:11:38 +0100</pubDate>
+      <pubDate>Mon, 14 Feb 2022 00:11:38 +0100</pubDate>
       
       <guid>https://glacierzero.com/tags/data-structures/</guid>
       <description></description>
@@ -23,7 +50,7 @@
     <item>
       <title>go</title>
       <link>https://glacierzero.com/tags/go/</link>
-      <pubDate>Thu, 27 Jan 2022 00:11:38 +0100</pubDate>
+      <pubDate>Mon, 14 Feb 2022 00:11:38 +0100</pubDate>
       
       <guid>https://glacierzero.com/tags/go/</guid>
       <description></description>

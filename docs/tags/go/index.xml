@@ -10,11 +10,11 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Jan 2022 00:11:38 +0100</lastBuildDate><atom:link href="https://glacierzero.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Feb 2022 00:11:38 +0100</lastBuildDate><atom:link href="https://glacierzero.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using Go Maps: pointers and value types</title>
       <link>https://glacierzero.com/blog/go_maps_usage/</link>
-      <pubDate>Thu, 27 Jan 2022 00:11:38 +0100</pubDate>
+      <pubDate>Mon, 14 Feb 2022 00:11:38 +0100</pubDate>
       
       <guid>https://glacierzero.com/blog/go_maps_usage/</guid>
       <description>Hash maps are often a good data structure when we want to access or store pairs of associated data; pairs commonly known as key-value.
