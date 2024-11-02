@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">tmux: productive cli workflow | GlacierZero</title>
+<meta property="og:title" content="tmux: productive cli workflow | GlacierZero" />
+<meta name="twitter:title" content="tmux: productive cli workflow | GlacierZero" />
+<meta itemprop="name" content="tmux: productive cli workflow | GlacierZero" />
+<meta name="application-name" content="tmux: productive cli workflow | GlacierZero" />
+<meta property="og:site_name" content="GlacierZero" />
+
+<meta name="description" content="">
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="https://glacierzero.com/posts/tmux_workflow_nov21/" title="English" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2021-11-24T00:00:00Z />
+    <meta property="article:published_time" content=2021-11-24T00:00:00Z />
+    <meta property="og:url" content="https://glacierzero.com/posts/tmux_workflow_nov21/" />
+
+    
+    <meta property="og:article:author" content="Plácido Fernández" />
+    <meta property="article:author" content="Plácido Fernández" />
+    <meta name="author" content="Plácido Fernández" />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "tmux: productive cli workflow",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2021-11-24",
+        "description": "",
+        "wordCount":  879 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2021-11-24",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "GlacierZero"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.136.3">
+
+    
+    <meta property="og:url" content="https://glacierzero.com/posts/tmux_workflow_nov21/">
+  <meta property="og:site_name" content="GlacierZero">
+  <meta property="og:title" content="tmux: productive cli workflow">
+  <meta property="og:description" content="Tmux has 2 main functions:
+Creating, accessing and managing terminals from a single screen Detaching and reattaching to the session: it allows you to continue were you left Here I share the workflow I use everyday at work and my personal computer, explaining with it what I believe are the core features of tmux.
+Why tmux tmux is a tool to organize yourself in your terminal:
+create and close windows names windows for easier organization split windows vertically and/or horizontally into panes as much as you want focus on some specific pane move around between windows and panes detach from a session and come back days later and continue everything were you left it share sessions between computers Many of these things can be achieved with other tools, or combination of tools. Some terminals can split windows, in other you can open as many tabs or windows you want, other tools allow you to resume your work after closing a terminal.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-11-24T00:00:00+00:00">
+    <meta property="article:modified_time" content="2021-11-24T00:00:00+00:00">
+    <meta property="article:tag" content="Terminal">
+    <meta property="article:tag" content="Cli">
+    <meta property="article:tag" content="Keyboard">
+    <meta property="article:tag" content="Productivity">
+    <meta property="og:image" content="https://glacierzero.com/en/posts/img/tmux-9vQG6v1md1s.jpg">
+
+
+    
+    
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://glacierzero.com/en/posts/img/tmux-9vQG6v1md1s.jpg">
+  <meta name="twitter:title" content="tmux: productive cli workflow">
+  <meta name="twitter:description" content="Tmux has 2 main functions:
+Creating, accessing and managing terminals from a single screen Detaching and reattaching to the session: it allows you to continue were you left Here I share the workflow I use everyday at work and my personal computer, explaining with it what I believe are the core features of tmux.
+Why tmux tmux is a tool to organize yourself in your terminal:
+create and close windows names windows for easier organization split windows vertically and/or horizontally into panes as much as you want focus on some specific pane move around between windows and panes detach from a session and come back days later and continue everything were you left it share sessions between computers Many of these things can be achieved with other tools, or combination of tools. Some terminals can split windows, in other you can open as many tabs or windows you want, other tools allow you to resume your work after closing a terminal.">
+
+
+    
+
+    <link rel="canonical" href="https://glacierzero.com/posts/tmux_workflow_nov21/">
+    <link href="../../style.min.a38f1baa66c9873f05e0d8090cc0125d31e613a2185627de210b10e44eb5c6de.css" rel="stylesheet">
+    <link href="../../code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="../../icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../icons/favicon-16x16.png">
+    <link rel="mask-icon" href="../../icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+
+
+
+<link rel="manifest" href="https://glacierzero.com/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="../../icons/favicon.svg">
+
+    
+    </head>
+<body data-theme = "dark" class="notransition">
+
+<script src="../../js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="https://glacierzero.com/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="../../">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="../../posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="../../about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="../../tags/">
+                        Tags
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">tmux: productive cli workflow</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2021-11-24T00:00:00&#43;00:00" itemprop="datePublished"> 24 Nov 2021 </time>
+                </div>
+                
+            </header>
+            
+    
+    <details class="toc" ZgotmplZ>
+        <summary><b>Table of Contents</b></summary>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#why-tmux">Why tmux</a></li>
+    <li><a href="#sessions">Sessions</a></li>
+    <li><a href="#windows">Windows</a></li>
+    <li><a href="#panes">Panes</a></li>
+  </ul>
+</nav>
+    </details>
+            <div class="page-content">
+                <p><a href="https://github.com/tmux/tmux">Tmux</a> has 2 main functions:</p>
+<ol>
+<li>Creating, accessing and managing terminals from a single screen</li>
+<li>Detaching and reattaching to the session: it allows you to continue were you left</li>
+</ol>
+<p>Here I share the workflow I use everyday at work and my personal computer, explaining with it what I believe are the core features of tmux.</p>
+<h2 id="why-tmux">Why tmux</h2>
+<p><code>tmux</code> is a tool to organize yourself in your terminal:</p>
+<ul>
+<li>create and close windows</li>
+<li>names windows for easier organization</li>
+<li>split windows vertically and/or horizontally into panes as much as you want</li>
+<li>focus on some specific pane</li>
+<li>move around between windows and panes</li>
+<li>detach from a session and come back days later and continue everything were you left it</li>
+<li>share sessions between computers</li>
+</ul>
+<p>Many of these things can be achieved with other tools, or combination of tools. Some terminals can split windows, in other you can open as many tabs or windows you want, other tools allow you to resume your work after closing a terminal.</p>
+<p>But <code>tmux</code> is a central place to do all this, it is indepent from the application you use to access a terminal, and you can use it in remote servers to keep using your workflow. One only needs to learn the shortcuts, which work around a prefix key followed by some other key or keys: <code>ctrl + b</code> by default.</p>
+<p>With it I can open any number of files in my text editor of choice, arranged in splits or windows however I prefer. I can be compiling some big project in one windows, then switch to other window to start a web server while the other window is compiling, then jump to a window with two files opened split vertically to compare them. And at the end of the day I can just detach, and continue were I left the day after: same arrangement, windows.</p>
+<p>Long running tasks like compilation or tests may be left running in background without a remote session being killed for inactivity.</p>
+<h2 id="sessions">Sessions</h2>
+<p>Sessions allow to manage groups of windows, one can connect and disconnect from these, like changing projects or workspaces. I almost never use more than one session: I just connect and work with the same session.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># Create new named session</span>
+</span></span><span class="line"><span class="cl">tmux new -s &lt;session name&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># attach to named session</span>
+</span></span><span class="line"><span class="cl">tmux a -t &lt;name&gt;
+</span></span><span class="line"><span class="cl">tmux attach -t &lt;name&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># detach from session</span>
+</span></span><span class="line"><span class="cl">prefix + d
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># attach to last used session</span>
+</span></span><span class="line"><span class="cl">tmux a
+</span></span></code></pre></div><p>Whenever I start a terminal I automatically connect to it through my <code>.bashrc</code> file with the following:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1">#######################################################</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Load tmux on first terminal</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#######################################################</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 1. check existance of tmux command</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. check for interactive shell (PS1)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. Avoid tmux (and screen) running within itself</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="nb">command</span> -v tmux <span class="p">&amp;</span>&gt; /dev/null <span class="o">&amp;&amp;</span> <span class="o">[</span> -n <span class="s2">&#34;</span><span class="nv">$PS1</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="o">[[</span> ! <span class="s2">&#34;</span><span class="nv">$TERM</span><span class="s2">&#34;</span> <span class="o">=</span>~ screen <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="o">[[</span> ! <span class="s2">&#34;</span><span class="nv">$TERM</span><span class="s2">&#34;</span> <span class="o">=</span>~ tmux <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$TMUX</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># with exec command, on exiting tmux the terminal is closed</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># also with exec, on opening a second window no duplicate session is catched</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># on this config, new window can be run from the terminal `st -t &#34;name&#34;`</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># exec tmux new -s server</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># alternatively just run tmux (but duplicate session detected)</span>
+</span></span><span class="line"><span class="cl">  tmux new -s server
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></div><h2 id="windows">Windows</h2>
+<p>Tmux windows are equivalent to tabs in web browsers, it allows you to open multiple command line prompts. Each window can hold multiple <a href="../../posts/tmux_workflow_nov21/#panes">panes</a>, but can also be used without them.</p>
+<p>There are different ways of switching between windows:</p>
+<ul>
+<li>With <code>prefix + 0...9</code>: input the number assigned to the window
+<ul>
+<li>Limited to 10 windows, since only one digit is used to change between them</li>
+</ul>
+</li>
+<li>With <code>prefix + '</code>, then input the number
+<ul>
+<li>Takes an extra step, but allows to enter any number even if more than one digit is used</li>
+</ul>
+</li>
+<li>With <code>prefix + w</code>: shows a list of windows and preview of each window panes (numbered panes)
+<ul>
+<li>This option gives the most info at a glance, and allows for intuitive switching with arrow keys (or vim-style keys <code>hjkl</code>)</li>
+<li>Sub panes can also be accessed with arrow keys for a fine-grained selection of prompt</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># create new window</span>
+</span></span><span class="line"><span class="cl">prefix + c
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># switch to window</span>
+</span></span><span class="line"><span class="cl">prefix + <span class="m">0</span> ... <span class="m">9</span>
+</span></span><span class="line"><span class="cl"><span class="c1">### switch inputing number</span>
+</span></span><span class="line"><span class="cl">prefix + <span class="sb">`</span>
+</span></span><span class="line"><span class="cl">&lt;number&gt;
+</span></span><span class="line"><span class="cl"><span class="c1">### switch showing list</span>
+</span></span><span class="line"><span class="cl">prefix + w
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># cycle through windows</span>
+</span></span><span class="line"><span class="cl">prefix + n
+</span></span><span class="line"><span class="cl">prefix + p
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># rename window</span>
+</span></span><span class="line"><span class="cl">prefix + ,
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># kill window</span>
+</span></span><span class="line"><span class="cl">prefix + <span class="p">&amp;</span>
+</span></span></code></pre></div><h2 id="panes">Panes</h2>
+<ul>
+<li>Panes can be used to display multiple terminals in the same window. Side by side terminals or complex configurations can be used here by splitting the window vertically and horizontally</li>
+<li>Panes can be zoomed in, so one focuses for a moment on it, then goes back to seeing all the panes together</li>
+<li>Panes can also be resized to give more space to some specific terminal</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># split horizontal - omit last &#34; symbol</span>
+</span></span><span class="line"><span class="cl">prefix + <span class="s2">&#34;                                     &#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># split vertical</span>
+</span></span><span class="line"><span class="cl">prefix + %
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># move to panel</span>
+</span></span><span class="line"><span class="cl">prefix + &lt;arrow key&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># cycle through panels</span>
+</span></span><span class="line"><span class="cl">prefix + o
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># kill current panel</span>
+</span></span><span class="line"><span class="cl">prefix + x
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># resize panels</span>
+</span></span><span class="line"><span class="cl">prefix + alt + &lt;arrow&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># zoom current pane</span>
+</span></span><span class="line"><span class="cl">prefix + z
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Balance size panels vertically</span>
+</span></span><span class="line"><span class="cl">prefix + Alt + <span class="m">2</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Balance size panels horizontally</span>
+</span></span><span class="line"><span class="cl">prefix + Alt + <span class="m">1</span>
+</span></span></code></pre></div>
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+</div>
+    <small class="footer_copyright">
+        © 2024 Plácido Fernández.
+        Powered by <a href="https://github.com/fdplacido/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script src="https://glacierzero.com/js/main.min.35f435a5d8eac613c52daa28d8af544a4512337d3e95236e4a4978417b8dcb2f.js" integrity="sha256-NfQ1pdjqxhPFLaoo2K9USkUSM30&#43;lSNuSkl4QXuNyy8="></script>
+
+    
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spack on GlacierZero</title>
+    <link>https://glacierzero.com/tags/spack/</link>
+    <description>Recent content in Spack on GlacierZero</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 11 Apr 2022 10:03:17 +0200</lastBuildDate><atom:link href="https://glacierzero.com/tags/spack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Spack package manager for supercomputers to install software locally</title>
+      <link>https://glacierzero.com/posts/using_spack/</link>
+      <pubDate>Mon, 11 Apr 2022 10:03:17 +0200</pubDate>
+      
+      <guid>https://glacierzero.com/posts/using_spack/</guid>
+      
+      <description>&lt;p&gt;I often find myself building software in different machines, with different configurations, architectures and compilers. Sometimes I just need to install some package in a server with not enough permissions to do so via the regular package manager.&lt;/p&gt;
+&lt;p&gt;Spack to the rescue!&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s see an example where one wants to use &lt;a href=&#34;../../posts/tmux_workflow_nov21/&#34;&gt;tmux&lt;/a&gt; in a machine where it is not installed, nor one has permissions to do so. Given that python is present in the system, and a compiler, one can try to compile tmux, to quickly find it will need several dependencies like libevent. Spack allows us to quickly check those dependencies:&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

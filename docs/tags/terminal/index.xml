@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Terminal on GlacierZero</title>
+    <link>https://glacierzero.com/tags/terminal/</link>
+    <description>Recent content in Terminal on GlacierZero</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 19 Jan 2022 01:12:42 +0100</lastBuildDate><atom:link href="https://glacierzero.com/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Names of symbols when programming, in english</title>
+      <link>https://glacierzero.com/posts/symbol_names_english/</link>
+      <pubDate>Wed, 19 Jan 2022 01:12:42 +0100</pubDate>
+      
+      <guid>https://glacierzero.com/posts/symbol_names_english/</guid>
+      
+      <description>&lt;p&gt;Some will disagree since this differs between countries, regions or even companies. But this should be a common ground that everyone can understand what one is referring to. Probably brackets are the most controversial.&lt;/p&gt;
+&lt;p&gt;This are the most common names to refer to various symbols often found when programming:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;()  : brackets / parenthesis
+[]  : square brackets
+{}  : curly brackets
+&amp;lt;&amp;gt;  : angle brackets
+&amp;#34;   : double quote
+&amp;#39;   : single quote
+`   : backquote
+#   : hash
+-   : dash
+_   : underscore
+:   : colon
+;   : semicolon
+.   : period
+@   : at
+&amp;amp;   : ampersand
+/   : slash
+\   : backslash
+|   : pipe
+~   : tilde
+^   : caret
+*   : asterisk
+&lt;/code&gt;&lt;/pre&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>tmux: productive cli workflow</title>
+      <link>https://glacierzero.com/posts/tmux_workflow_nov21/</link>
+      <pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://glacierzero.com/posts/tmux_workflow_nov21/</guid>
+      
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/tmux/tmux&#34;&gt;Tmux&lt;/a&gt; has 2 main functions:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Creating, accessing and managing terminals from a single screen&lt;/li&gt;
+&lt;li&gt;Detaching and reattaching to the session: it allows you to continue were you left&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Here I share the workflow I use everyday at work and my personal computer, explaining with it what I believe are the core features of tmux.&lt;/p&gt;
+&lt;h2 id=&#34;why-tmux&#34;&gt;Why tmux&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;tmux&lt;/code&gt; is a tool to organize yourself in your terminal:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;create and close windows&lt;/li&gt;
+&lt;li&gt;names windows for easier organization&lt;/li&gt;
+&lt;li&gt;split windows vertically and/or horizontally into panes as much as you want&lt;/li&gt;
+&lt;li&gt;focus on some specific pane&lt;/li&gt;
+&lt;li&gt;move around between windows and panes&lt;/li&gt;
+&lt;li&gt;detach from a session and come back days later and continue everything were you left it&lt;/li&gt;
+&lt;li&gt;share sessions between computers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Many of these things can be achieved with other tools, or combination of tools. Some terminals can split windows, in other you can open as many tabs or windows you want, other tools allow you to resume your work after closing a terminal.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

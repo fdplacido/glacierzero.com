@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Using Spack package manager for supercomputers to install software locally | GlacierZero</title>
+<meta property="og:title" content="Using Spack package manager for supercomputers to install software locally | GlacierZero" />
+<meta name="twitter:title" content="Using Spack package manager for supercomputers to install software locally | GlacierZero" />
+<meta itemprop="name" content="Using Spack package manager for supercomputers to install software locally | GlacierZero" />
+<meta name="application-name" content="Using Spack package manager for supercomputers to install software locally | GlacierZero" />
+<meta property="og:site_name" content="GlacierZero" />
+
+<meta name="description" content="">
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="https://glacierzero.com/posts/using_spack/" title="English" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2022-04-11T10:03:17&#43;0200 />
+    <meta property="article:published_time" content=2022-04-11T10:03:17&#43;0200 />
+    <meta property="og:url" content="https://glacierzero.com/posts/using_spack/" />
+
+    
+    <meta property="og:article:author" content="Plácido Fernández" />
+    <meta property="article:author" content="Plácido Fernández" />
+    <meta name="author" content="Plácido Fernández" />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "Using Spack package manager for supercomputers to install software locally",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2022-04-11",
+        "description": "",
+        "wordCount":  594 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2022-04-11",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "GlacierZero"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.136.3">
+
+    
+    <meta property="og:url" content="https://glacierzero.com/posts/using_spack/">
+  <meta property="og:site_name" content="GlacierZero">
+  <meta property="og:title" content="Using Spack package manager for supercomputers to install software locally">
+  <meta property="og:description" content="I often find myself building software in different machines, with different configurations, architectures and compilers. Sometimes I just need to install some package in a server with not enough permissions to do so via the regular package manager.
+Spack to the rescue!
+Let’s see an example where one wants to use tmux in a machine where it is not installed, nor one has permissions to do so. Given that python is present in the system, and a compiler, one can try to compile tmux, to quickly find it will need several dependencies like libevent. Spack allows us to quickly check those dependencies:">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-04-11T10:03:17+02:00">
+    <meta property="article:modified_time" content="2022-04-11T10:03:17+02:00">
+    <meta property="article:tag" content="Spack">
+    <meta property="article:tag" content="Hpc">
+    <meta property="article:tag" content="Linux">
+    <meta property="og:image" content="https://glacierzero.com/en/posts/img/spack-logo-white.svg">
+
+
+    
+    
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://glacierzero.com/en/posts/img/spack-logo-white.svg">
+  <meta name="twitter:title" content="Using Spack package manager for supercomputers to install software locally">
+  <meta name="twitter:description" content="I often find myself building software in different machines, with different configurations, architectures and compilers. Sometimes I just need to install some package in a server with not enough permissions to do so via the regular package manager.
+Spack to the rescue!
+Let’s see an example where one wants to use tmux in a machine where it is not installed, nor one has permissions to do so. Given that python is present in the system, and a compiler, one can try to compile tmux, to quickly find it will need several dependencies like libevent. Spack allows us to quickly check those dependencies:">
+
+
+    
+
+    <link rel="canonical" href="https://glacierzero.com/posts/using_spack/">
+    <link href="../../style.min.a38f1baa66c9873f05e0d8090cc0125d31e613a2185627de210b10e44eb5c6de.css" rel="stylesheet">
+    <link href="../../code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="../../icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../icons/favicon-16x16.png">
+    <link rel="mask-icon" href="../../icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+
+
+
+<link rel="manifest" href="https://glacierzero.com/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="../../icons/favicon.svg">
+
+    
+    </head>
+<body data-theme = "dark" class="notransition">
+
+<script src="../../js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="https://glacierzero.com/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="../../">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="../../posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="../../about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="../../tags/">
+                        Tags
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Using Spack package manager for supercomputers to install software locally</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2022-04-11T10:03:17&#43;02:00" itemprop="datePublished"> 11 Apr 2022 </time>
+                </div>
+                
+            </header>
+            
+    
+    <details class="toc" ZgotmplZ>
+        <summary><b>Table of Contents</b></summary>
+        <nav id="TableOfContents"></nav>
+    </details>
+            <div class="page-content">
+                <p>I often find myself building software in different machines, with different configurations, architectures and compilers. Sometimes I just need to install some package in a server with not enough permissions to do so via the regular package manager.</p>
+<p>Spack to the rescue!</p>
+<p>Let&rsquo;s see an example where one wants to use <a href="../../posts/tmux_workflow_nov21/">tmux</a> in a machine where it is not installed, nor one has permissions to do so. Given that python is present in the system, and a compiler, one can try to compile tmux, to quickly find it will need several dependencies like libevent. Spack allows us to quickly check those dependencies:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">spack info tmux
+</span></span></code></pre></div><p>The <code>info</code> command will give us an overview of the <em>recipe</em>: a description, available versions and build and link dependencies. A <em>recipe</em> contains the instructions on how to build a particular package, and on installation Spack will proceed to compile the package and all its dependencies.</p>
+<p>We can check the dependencies that will be built by checking the <code>spec</code> of the package:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">spack spec tmux
+</span></span></code></pre></div><p>This will show not only the dependency tree, but the concrete versions, compilers, architectures and variants used to get the package compiled:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">Input spec
+</span></span><span class="line"><span class="cl">--------------------------------
+</span></span><span class="line"><span class="cl">tmux
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Concretized
+</span></span><span class="line"><span class="cl">--------------------------------
+</span></span><span class="line"><span class="cl">tmux@3.2a%gcc@8.3.0 <span class="nv">arch</span><span class="o">=</span>linux-centos7-haswell
+</span></span><span class="line"><span class="cl">    ^libevent@2.1.12%gcc@8.3.0+openssl <span class="nv">arch</span><span class="o">=</span>linux-centos7-haswell
+</span></span><span class="line"><span class="cl">        ^openssl@1.1.1m%gcc@8.3.0~docs <span class="nv">certs</span><span class="o">=</span>system <span class="nv">arch</span><span class="o">=</span>linux-centos7-haswell
+</span></span><span class="line"><span class="cl">            ^perl@5.34.0%gcc@8.3.0+cpanm+shared+threads <span class="nv">arch</span><span class="o">=</span>linux-centos7-haswell
+</span></span><span class="line"><span class="cl">                ^berkeley-db@18.1.40%gcc@8.3.0+cxx~docs+stl <span class="nv">patches</span><span class="o">=</span>b231fcc <span class="nv">arch</span><span class="o">=</span>linux-centos7-haswell
+</span></span><span class="line"><span class="cl">                ^bzip2@1.0.8%gcc@8.3.0~debug~pic+shared <span class="nv">arch</span><span class="o">=</span>linux-centos7-haswell
+</span></span><span class="line"><span class="cl">                    ^diffutils@3.8%gcc@8.3.0 <span class="nv">arch</span><span class="o">=</span>linux-centos7-haswell
+</span></span><span class="line"><span class="cl">                        ^libiconv@1.16%gcc@8.3.0 <span class="nv">libs</span><span class="o">=</span>shared,static <span class="nv">arch</span><span class="o">=</span>linux-centos7-haswell
+</span></span><span class="line"><span class="cl">                ^gdbm@1.19%gcc@8.3.0 <span class="nv">arch</span><span class="o">=</span>linux-centos7-haswell
+</span></span><span class="line"><span class="cl">                    ^readline@8.1%gcc@8.3.0 <span class="nv">arch</span><span class="o">=</span>linux-centos7-haswell
+</span></span><span class="line"><span class="cl">                        ^ncurses@6.2%gcc@8.3.0~symlinks+termlib <span class="nv">abi</span><span class="o">=</span>none <span class="nv">arch</span><span class="o">=</span>linux-centos7-haswell
+</span></span><span class="line"><span class="cl">                            ^pkgconf@1.8.0%gcc@8.3.0 <span class="nv">arch</span><span class="o">=</span>linux-centos7-haswell
+</span></span><span class="line"><span class="cl">                ^zlib@1.2.11%gcc@8.3.0+optimize+pic+shared <span class="nv">arch</span><span class="o">=</span>linux-centos7-haswell
+</span></span></code></pre></div><p>Here is where Spack shines: we can configure how the package and its dependencies will be built. A package and its dependencies will be built with the included compiler (a newer compiler can be compiled if needed) and installed locally, in a user accessible directory: no need for root permissions to install the software.</p>
+<p>To customize how a package will be installed we can use several specifiers: <code>@</code> for versions, <code>%</code> for compilers, <code>^</code> for dependencies, <code>+</code> for variants and <code>~</code> or <code>-</code> to turn off variants.</p>
+<p>Following the previous example, let say one wants to install tmux but the underlying libevent to not be built with openssl. The default variant is to use openssl as seen in the <code>spec</code> command: <code>^libevent@2.1.12%gcc@8.3.0+openssl</code>. To do se we could do the following:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">spack spec tmux ^libevent -openssl
+</span></span></code></pre></div><p>which will give us the following dependencies tree:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">Input spec
+</span></span><span class="line"><span class="cl">--------------------------------
+</span></span><span class="line"><span class="cl">tmux
+</span></span><span class="line"><span class="cl">    ^libevent~openssl
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Concretized
+</span></span><span class="line"><span class="cl">--------------------------------
+</span></span><span class="line"><span class="cl">tmux@3.2a%gcc@8.3.0 <span class="nv">arch</span><span class="o">=</span>linux-centos7-haswell
+</span></span><span class="line"><span class="cl">    ^libevent@2.1.12%gcc@8.3.0~openssl <span class="nv">arch</span><span class="o">=</span>linux-centos7-haswell
+</span></span><span class="line"><span class="cl">    ^ncurses@6.2%gcc@8.3.0~symlinks+termlib <span class="nv">abi</span><span class="o">=</span>none <span class="nv">arch</span><span class="o">=</span>linux-centos7-haswell
+</span></span><span class="line"><span class="cl">        ^pkgconf@1.8.0%gcc@8.3.0 <span class="nv">arch</span><span class="o">=</span>linux-centos7-haswell
+</span></span></code></pre></div><p>Here we are saying: tell me the configuration and dependencies of installing tmux with its libevent dependency (<code>^</code>) but don&rsquo;t use the openssl variant for libevent (using <code>-</code> after the <code>^libevent</code>). The same could be done for any variant, compiler version, architecture and more.</p>
+<p>If satisfied with the configuration we can go ahead and install the package:</p>
+<pre tabindex="0"><code>spack install tmux ^libevent -openssl
+spack load tmux
+</code></pre><p>To check where the package is located we can use the <code>location</code> command or <code>load</code> the package and the check with something like <code>which</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># show path where a package is installed</span>
+</span></span><span class="line"><span class="cl">spack location -i tmux
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># load package into environment variables</span>
+</span></span><span class="line"><span class="cl">spack load tmux
+</span></span><span class="line"><span class="cl"><span class="c1"># check its location</span>
+</span></span><span class="line"><span class="cl">which tmux
+</span></span></code></pre></div><p>We can even go ahead and install both variants:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">spack install tmux
+</span></span><span class="line"><span class="cl">spack install tmux ^libevent -openssl
+</span></span></code></pre></div><p>And then <code>load</code> to our environment variables the one to be used:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">spack load tmux ^libevent -opensll
+</span></span></code></pre></div><p>Both version will be installed in the system at the same time, and both can be used for different configurations. The same is true for all the possible configurations in case we need a package compiled by a specific compiler, or compiler version, or architecture, etc. With all packages living in the same system and loaded dynamically.</p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+</div>
+    <small class="footer_copyright">
+        © 2024 Plácido Fernández.
+        Powered by <a href="https://github.com/fdplacido/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script src="https://glacierzero.com/js/main.min.35f435a5d8eac613c52daa28d8af544a4512337d3e95236e4a4978417b8dcb2f.js" integrity="sha256-NfQ1pdjqxhPFLaoo2K9USkUSM30&#43;lSNuSkl4QXuNyy8="></script>
+
+    
+
+</body>
+</html>

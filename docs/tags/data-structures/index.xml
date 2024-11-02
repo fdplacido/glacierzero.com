@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Structures on GlacierZero</title>
+    <link>https://glacierzero.com/tags/data-structures/</link>
+    <description>Recent content in Data Structures on GlacierZero</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 14 Feb 2022 00:11:38 +0100</lastBuildDate><atom:link href="https://glacierzero.com/tags/data-structures/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Go Maps: pointers and value types</title>
+      <link>https://glacierzero.com/posts/go_maps_usage/</link>
+      <pubDate>Mon, 14 Feb 2022 00:11:38 +0100</pubDate>
+      
+      <guid>https://glacierzero.com/posts/go_maps_usage/</guid>
+      
+      <description>&lt;p&gt;Hash maps are often a good data structure when we want to access or store pairs of associated data; pairs commonly known as key-value.&lt;/p&gt;
+&lt;p&gt;What makes a hash table (a map) a great data structure is that internally it will compute an index based on the key, that will point us to where our value is. This is what makes them so fast to insert &lt;em&gt;O(1)&lt;/em&gt;, delete &lt;em&gt;O(1)&lt;/em&gt; and search &lt;em&gt;O(1)&lt;/em&gt; for most cases (on average) with unordered data, while taking &lt;em&gt;O(n)&lt;/em&gt; space. This makes them much faster (on average) than arrays to search, insert and delete elements on it.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
