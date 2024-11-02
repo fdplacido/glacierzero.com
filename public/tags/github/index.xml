@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Github on GlacierZero</title>
+    <link>https://glacierzero.com/tags/github/</link>
+    <description>Recent content in Github on GlacierZero</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 07 Dec 2021 22:18:34 +0100</lastBuildDate><atom:link href="https://glacierzero.com/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github keyboard shortcuts to move around faster and productively</title>
+      <link>https://glacierzero.com/posts/github_usage_dec21/</link>
+      <pubDate>Tue, 07 Dec 2021 22:18:34 +0100</pubDate>
+      
+      <guid>https://glacierzero.com/posts/github_usage_dec21/</guid>
+      
+      <description>&lt;p&gt;If you often browse Github repositories on your browser, chances are you find yourself moving between files, jumping between lines, reviewing &lt;em&gt;diffs&lt;/em&gt; and other common source code related tasks. Github has a list of commands&lt;a href=&#34;../../posts/github_usage_dec21/#r1-github-commands&#34;&gt;[1]&lt;/a&gt; and keyboard shortcuts&lt;a href=&#34;../../posts/github_usage_dec21/#r2-github-shortcuts&#34;&gt;[2]&lt;/a&gt; to move around faster.&lt;/p&gt;
+&lt;p&gt;Here are the keyboard shortcuts that I find myself using more often to navigate and interact with Github repositories:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Ctrl + k&lt;/code&gt;: Open &lt;strong&gt;command palette&lt;/strong&gt; with fuzzy search
+&lt;ul&gt;
+&lt;li&gt;From here you make a wide range of actions by just writting: where you want to, or what you want to do&lt;/li&gt;
+&lt;li&gt;Search is fuzzy, so you don&amp;rsquo;t even need to type the complete command, or even correctly&lt;/li&gt;
+&lt;li&gt;Navigate between tabs, just type: issues, PRs, Actions, Settings&lt;/li&gt;
+&lt;li&gt;Navigate between repositories: delete the repository name, and start writing a different one which belogs to the user or organization&lt;/li&gt;
+&lt;li&gt;Run commands by typing &lt;code&gt;&amp;gt;&lt;/code&gt;. From here one can run things like: creating an issue, close a pull request or updating the current branch&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;t&lt;/code&gt;: File finder
+&lt;ul&gt;
+&lt;li&gt;When you know the name of the file you are looking for, or part of it, just start typing it to filter the possible results&lt;/li&gt;
+&lt;li&gt;Easy to filter by extension or some other pattern in the file name: type part of the name, then &lt;code&gt;.&lt;/code&gt; followed by the extension to filter further&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;l&lt;/code&gt;: Go to line
+&lt;ul&gt;
+&lt;li&gt;With a file opened, jump directly to some line by typing the number&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;w&lt;/code&gt;: Switch to a branch or tag
+&lt;ul&gt;
+&lt;li&gt;To quickly change to some branch or tag if you know the name or part of the name of it&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;e&lt;/code&gt;: Edit file
+&lt;ul&gt;
+&lt;li&gt;I don&amp;rsquo;t find myself using this one much, but some quick or small changes it may be useful when you are not working with your local editor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.&lt;/code&gt;: Open in web editor
+&lt;ul&gt;
+&lt;li&gt;If not working in your own machine, only have access to a browser, or don&amp;rsquo;t have access to your everyday source code editor or IDE, this option gives you an online IDE. It is an online instance of &lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;VSCode&lt;/a&gt;, with all of its features, one of the outcomes of Microsoft buying Github.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Full reference of the keyboard shortctus and command palette options:&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
